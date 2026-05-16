@@ -25,6 +25,8 @@ with st.sidebar:
     st.header("⚙️ Settings")
     api_key = st.secrets.get("GROQ_API_KEY", None)
     st.divider()
+    st.markdown("---")
+    st.markdown("👩‍💻 **Made by Khushi Pal**")
 
     # 🌐 Language selector
     language = st.selectbox("🌐 Response Language", 
@@ -141,3 +143,5 @@ if prompt := st.chat_input("Ask me any topic, upload notes, or say YES for a qui
         st.markdown(reply)
 
     st.rerun()
+    st.markdown("---")
+    st.markdown("<center>👩‍💻 Made with ❤️ by <b>Khushi Pal</b></center>", unsafe_allow_html=True)
