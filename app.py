@@ -23,8 +23,7 @@ st.caption("Your personal AI-powered learning companion!")
 # ✅ Sidebar
 with st.sidebar:
     st.header("⚙️ Settings")
-    api_key = st.text_input("Enter your Groq API Key", type="password")
-    st.markdown("Get your free key at [console.groq.com](https://console.groq.com)")
+    api_key = st.secrets.get("GROQ_API_KEY", None)
     st.divider()
 
     # 🌐 Language selector
@@ -109,7 +108,7 @@ for msg in st.session_state.chat_history:
 # ✅ Chat input
 if prompt := st.chat_input("Ask me any topic, upload notes, or say YES for a quiz!"):
     if not api_key:
-        st.warning("⚠️ Please enter your Groq API key in the sidebar!")
+        st.warning("⚠️ API key not configured. Please contact the app owner!")
         st.stop()
 
     # Track topics
