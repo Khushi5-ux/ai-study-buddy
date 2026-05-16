@@ -143,5 +143,5 @@ if prompt := st.chat_input("Ask me any topic, upload notes, or say YES for a qui
         st.markdown(reply)
 
     st.rerun()
-    st.markdown("---")
-    st.markdown("<center>👩‍💻 Made with ❤️ by <b>Khushi Pal</b></center>", unsafe_allow_html=True)
+st.markdown("---")
+st.markdown("<center>👩‍💻 Made with ❤️ by <b>Khushi Pal</b></center>", unsafe_allow_html=True)
